@@ -12,17 +12,19 @@ class CampaignIndex extends Component {
   }
 
   renderCampaigns() {
-    const items = this.props.campaigns.map(address => {
-      return {
-        header: address,
-        description: (
-          <Link route={`/campaigns/${address}`}>
-            <a>View Campaign</a>
-          </Link>
-        ),
-        fluid: true
-      };
-    });
+    const items = this.props.campaigns
+      .map(address => {
+        return {
+          header: address,
+          description: (
+            <Link route={`/campaigns/${address}`}>
+              <a>View Campaign</a>
+            </Link>
+          ),
+          fluid: true
+        };
+      })
+      .reverse();
 
     return <Card.Group items={items} />;
   }

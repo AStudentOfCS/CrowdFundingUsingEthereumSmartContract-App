@@ -71,7 +71,7 @@ class CampaignShow extends Component {
   render() {
     return (
       <Layout>
-        <h3>CampaignShow</h3>
+        <h3>Campaign Details</h3>
         <Grid>
           <Grid.Row>
             <Grid.Column width={10}>{this.renderCards()}</Grid.Column>
